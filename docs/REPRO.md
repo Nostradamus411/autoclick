@@ -11,10 +11,10 @@ Follow these steps to rebuild the artifacts and confirm their checksums match th
 ## Rebuild the artifacts
 1. Clone the tagged release: `git clone <repo> && cd autoclick && git checkout <tag>`.
 2. Install dependencies: `npm ci`.
-3. Build renderer and package the app (no publishing):
+3. Build renderer and package the app (no publishing). On Windows, set `CSC_IDENTITY_AUTO_DISCOVERY=false` to skip code-sign discovery:
    ```sh
    npm run build
-   npx electron-builder --config release.config.json --publish never
+   CSC_IDENTITY_AUTO_DISCOVERY=false npx electron-builder --config release.config.json --publish never
    ```
    Artifacts appear under `release/`.
 

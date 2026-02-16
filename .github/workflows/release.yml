@@ -19,6 +19,7 @@ jobs:
       CI: true
       TZ: UTC
       LC_ALL: en_US.UTF-8
+      CSC_IDENTITY_AUTO_DISCOVERY: 'false'
     steps:
       - name: Checkout
         uses: actions/checkout@v5

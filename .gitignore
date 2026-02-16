@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+/dist/
+/build/
+/out/
+/coverage/
+/.nyc_output/
+
+# Electron/Electron-Builder artifacts
+/release/
+*.dmg
+*.exe
+*.AppImage
+*.asar
+*.snap
+*.deb
+*.rpm
+*.msi
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Editor/OS noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary files
+*.swp
+*.tmp

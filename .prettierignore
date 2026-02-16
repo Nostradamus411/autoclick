@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+out/
+coverage/
+release/
+.nyc_output/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.specify/
+.github/
+.vscode/

@@ -1,0 +1,35 @@
+{
+  "appId": "com.minimal.autoclick",
+  "productName": "Autoclick",
+  "directories": {
+    "output": "release",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist/**",
+    "packages/**",
+    "build/**",
+    "electron-env.d.ts",
+    "package.json"
+  ],
+  "asar": true,
+  "compression": "store",
+  "extraMetadata": {
+    "main": "dist/main/index.js"
+  },
+  "artifactName": "autoclick-${version}-${os}-${arch}.${ext}",
+  "mac": {
+    "target": ["dmg", "zip"],
+    "category": "public.app-category.utilities"
+  },
+  "win": {
+    "target": ["nsis", "zip"],
+    "publisherName": "Autoclick",
+    "sign": false
+  },
+  "linux": {
+    "target": ["AppImage", "tar.gz"],
+    "maintainer": "Autoclick",
+    "category": "Utility"
+  }
+}

@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+      TZ: UTC
+      LC_ALL: en_US.UTF-8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Use Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build renderer and package app
+        run: |
+          npm run build
+          npx electron-builder --config release.config.json --publish never
+
+      - name: Generate checksums
+        run: |
+          ls -la release || true
+          find release -maxdepth 1 -type f -print0 | sort -z | xargs -0 sha256sum > checksums.txt
+
+      - name: Upload artifacts and checksums
+        uses: actions/upload-artifact@v4
+        with:
+          name: autoclick-release
+          path: |
+            release/**/*
+            checksums.txt

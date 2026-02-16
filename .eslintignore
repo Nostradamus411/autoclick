@@ -1,0 +1,11 @@
+node_modules/
+dist/
+build/
+out/
+coverage/
+release/
+.nyc_output/
+.specify/
+.github/
+.vscode/
+*.log

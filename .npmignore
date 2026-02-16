@@ -1,0 +1,14 @@
+node_modules/
+dist/
+build/
+out/
+coverage/
+release/
+.nyc_output/
+.github/
+.vscode/
+specs/
+tests/
+playwright.config.ts
+vitest.config.ts
+jest.config.cjs

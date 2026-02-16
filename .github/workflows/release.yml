@@ -7,7 +7,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
     env:
       CI: true
       TZ: UTC
@@ -29,15 +36,16 @@ jobs:
           npm run build
           npx electron-builder --config release.config.json --publish never
 
+      - name: List release directory
+        run: ls -la release || true
+
       - name: Generate checksums
-        run: |
-          ls -la release || true
-          find release -maxdepth 1 -type f -print0 | sort -z | xargs -0 sha256sum > checksums.txt
+        run: node scripts/generate-checksums.mjs
 
       - name: Upload artifacts and checksums
         uses: actions/upload-artifact@v4
         with:
-          name: autoclick-release
+          name: autoclick-release-${{ matrix.os }}
           path: |
             release/**/*
             checksums.txt

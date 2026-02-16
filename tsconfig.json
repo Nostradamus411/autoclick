@@ -20,6 +20,6 @@
       "@shared/*": ["src/shared/*"]
     }
   },
-  "include": ["src", "tests", "vite.config.ts", "vitest.config.mts", "jest.config.cjs", "electron-env.d.ts"],
+  "include": ["src", "tests", "vite.config.mts", "vitest.config.mts", "jest.config.cjs", "electron-env.d.ts"],
   "exclude": ["dist", "release", "node_modules"]
 }

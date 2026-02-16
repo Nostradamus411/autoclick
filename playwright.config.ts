@@ -6,4 +6,10 @@ export default defineConfig({
   use: {
     headless: false,
   },
+  webServer: {
+    command: 'npm run dev',
+    url: 'http://localhost:5173',
+    timeout: 120000,
+    reuseExistingServer: !process.env.CI,
+  },
 });

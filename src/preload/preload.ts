@@ -1,5 +1,5 @@
 import { contextBridge, ipcRenderer } from 'electron';
-import { IPC_CHANNELS } from '@main/ipc/channels';
+import { IPC_CHANNELS } from '../main/ipc/channels';
 import { ClickSessionConfiguration, ReleaseMetadata } from '@shared/types';
 
 contextBridge.exposeInMainWorld('autoclick', {
@@ -22,7 +22,7 @@ contextBridge.exposeInMainWorld('autoclick', {
 
 declare global {
   interface Window {
-    autoclick: {
+    autoclick?: {
       setConfig: (config: ClickSessionConfiguration) => Promise<unknown>;
       start: () => Promise<unknown>;
       stop: () => Promise<unknown>;

@@ -7,7 +7,7 @@
   },
   "files": [
     "dist/**",
-    "packages/**",
+    "dist-electron/**",
     "build/**",
     "electron-env.d.ts",
     "package.json"
@@ -15,7 +15,7 @@
   "asar": true,
   "compression": "store",
   "extraMetadata": {
-    "main": "dist/main/index.js"
+    "main": "dist-electron/main.js"
   },
   "artifactName": "autoclick-${version}-${os}-${arch}.${ext}",
   "mac": {

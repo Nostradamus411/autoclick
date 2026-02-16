@@ -1,7 +1,7 @@
 import { BrowserWindow, ipcMain } from 'electron';
 import { IPC_CHANNELS } from './channels';
 import { ClickSessionConfiguration, ClickStatus } from '@shared/types';
-import { startClickLoop, stopClickLoop, onStatus, onMotion, setConfiguration } from '@main/mouse-controller/click-loop';
+import { startClickLoop, stopClickLoop, onStatus, onMotion, setConfiguration } from '../mouse-controller/click-loop';
 
 let statusSubscribers: Array<(status: ClickStatus) => void> = [];
 

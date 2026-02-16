@@ -1,0 +1,5 @@
+64adad8b21040f494128d9d5d73b002ae01af772618afaa632c190f69aa5eb5c  release/autoclick-0.1.0-linux-x64.tar.gz
+ee109aa22978c66c447dd13a15249899d89819f711887e016a6a3346a432ca02  release/autoclick-0.1.0-linux-x86_64.AppImage
+d551ddbb3b5651895e2feddd30b453b4c6cb51f4724ca00ba1baa480598c2587  release/builder-debug.yml
+416699ab8f47fcefae606c6ce3794e62ce27e160261637f62dcbaa088f770cde  release/builder-effective-config.yaml
+b216bff61caec11d11dca9b3aa7f0f5a02b2f429cd3757069e3495580fd9852e  release/latest-linux.yml

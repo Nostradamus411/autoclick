@@ -2,7 +2,7 @@
   "name": "autoclick",
   "version": "0.1.0",
   "description": "Minimalist auto clicker UI (Electron + React + Vite)",
-  "main": "dist/main/index.js",
+  "main": "dist-electron/main.js",
   "author": "",
   "license": "MIT",
   "scripts": {
@@ -17,8 +17,6 @@
   },
   "dependencies": {
     "@nut-tree/nut-js": "^3.0.1",
-    "electron": "^28.3.0",
-    "electron-builder": "^24.13.3",
     "framer-motion": "^11.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -48,6 +46,8 @@
     "prettier": "^3.3.3",
     "ts-jest": "^29.2.5",
     "typescript": "^5.6.3",
+    "electron": "^28.3.0",
+    "electron-builder": "^24.13.3",
     "vite": "^5.2.10",
     "vite-plugin-electron": "^0.28.0",
     "vite-plugin-electron-renderer": "^0.14.6",
